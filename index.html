@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canlı Skor Tablosu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scoreboard-container">
+        <h1>CANLI SKORBOARD</h1>
+        
+        <div class="timer-section">
+            <div id="timer">90:00</div>
+            <div class="timer-controls">
+                <button id="startBtn" onclick="startTimer()">Başlat</button>
+                <button id="pauseBtn" onclick="pauseTimer()">Durdur</button>
+                <button id="resetTimerBtn" onclick="resetTimer()">Süre Sıfırla</button>
+            </div>
+        </div>
+
+        <div class="teams-container">
+            <div class="team home">
+                <input type="text" value="EV SAHİBİ" class="team-name" id="homeName">
+                <div class="score" id="homeScore">0</div>
+                <div class="score-controls">
+                    <button class="btn btn-add" onclick="changeScore('home', 1)">+1</button>
+                    <button class="btn btn-sub" onclick="changeScore('home', -1)">-1</button>
+                </div>
+            </div>
+
+            <div class="team away">
+                <input type="text" value="KONUK TAKIM" class="team-name" id="awayName">
+                <div class="score" id="awayScore">0</div>
+                <div class="score-controls">
+                    <button class="btn btn-add" onclick="changeScore('away', 1)">+1</button>
+                    <button class="btn btn-sub" onclick="changeScore('away', -1)">-1</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-reset-all" onclick="resetAll()">Her Şeyi Sıfırla</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
